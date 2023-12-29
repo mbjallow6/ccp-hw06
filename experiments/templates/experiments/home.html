@@ -1,0 +1,29 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+
+<p>If you see this, the template is rendering.</p>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Short Description</th>
+        <th>Owner Name</th>
+        <th>Details</th>
+    </tr>
+    {% for experiment in experiments %}
+    <tr>
+        <td>{{ experiment.date }}</td>
+        <td>{{ experiment.title }}</td>
+        <td>{{ experiment.short_description }}</td>
+        <td>{{ experiment.owner_name }}</td>
+        <td><a href="{% url 'experiments:detail' experiment.id %}">View</a></td>
+        
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">No experiments available.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -4,7 +4,7 @@
 {% block content %}
 <header>
     <h1>Welcome to the Experiment Hub!</h1>
-    <!-- Navigation links here -->
+    <!-- Navigation links -->
 </header>
 
 <section>
@@ -13,8 +13,7 @@
 </section>
 
 <section>
-    <a href="{% url 'submit_experiment' %}" class="btn btn-primary">Submit Your Experiment</a>
-    
+    <a href="{% url 'experiments:submit_experiment' %}" class="btn btn-primary">Submit Your Experiment</a>
 </section>
 {% endblock %}
 
@@ -24,5 +23,6 @@
     <p>Disclaimer: The content on this site is for informational purposes only...</p>
 </footer>
 {% endblock %}
+
 
 

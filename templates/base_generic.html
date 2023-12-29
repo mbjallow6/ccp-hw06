@@ -1,33 +1,38 @@
+<!-- base_generic.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}  <!-- Make sure this line is at the top -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment Hub</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
 </head>
 <body>
-    <header>
-        <!-- Header content here, like a logo or a navigation bar -->
-        <!-- This can be static or dynamically included from other templates -->
+    <header style="height: 10%; background-color: #f8f9fa;">
+        <nav>
+            <!-- Navigation menu -->
+            <ul>
+                <li><a href="{% url 'experiments:home' %}">Home</a></li>
+                <li><a href="{% url 'experiments:about' %}">About</a></li>
+                <li><a href="{% url 'experiments:submit_new_entry' %}">New Entry</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+
+    <main class="main-content" style="min-height: 80%;">
         {% block content %}
-        <!-- The content of each page will be inserted here -->
+        <!-- main content block -->
+
         {% endblock content %}
     </main>
 
-    <footer>
-        {% block footer %}
-        <!-- The footer content of each page will be inserted here -->
-        {% endblock footer %}
+    <footer style="height: 10%; background-color: #f8f9fa;">
+        <img src="{% static 'download.png' %}" alt="FH Dortmund Logo">
+        <p>Disclaimer: The content on this site is for informational purposes only and does not reflect the official stance of FH Dortmund.</p>
     </footer>
 
-    <!-- Add any additional scripts at the bottom -->
-    <script src="{% static 'js/main.js' %}"></script> <!-- Example JavaScript file -->
 </body>
 </html>
