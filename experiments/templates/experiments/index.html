@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+{% load static %} 
+
+{% block content %}
+<header>
+    <h1>Welcome to the Experiment Hub!</h1>
+    <!-- Navigation links here -->
+</header>
+
+<section>
+    <p>Explore our diverse range of scientific experiments...</p>
+    <!-- List of Featured Experiments -->
+</section>
+
+<section>
+    <a href="{% url 'submit_experiment' %}" class="btn btn-primary">Submit Your Experiment</a>
+    
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <img src="{% static 'path/to/fh-dortmund-logo.svg' %}" alt="FH Dortmund Logo">
+    <p>Disclaimer: The content on this site is for informational purposes only...</p>
+</footer>
+{% endblock %}
+
+

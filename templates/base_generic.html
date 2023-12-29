@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}  <!-- Make sure this line is at the top -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Hub</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+
+</head>
+<body>
+    <header>
+        <!-- Header content here, like a logo or a navigation bar -->
+        <!-- This can be static or dynamically included from other templates -->
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- The content of each page will be inserted here -->
+        {% endblock content %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <!-- The footer content of each page will be inserted here -->
+        {% endblock footer %}
+    </footer>
+
+    <!-- Add any additional scripts at the bottom -->
+    <script src="{% static 'js/main.js' %}"></script> <!-- Example JavaScript file -->
+</body>
+</html>
