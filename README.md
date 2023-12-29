@@ -8,6 +8,7 @@ Student ID: 7216697
 School: FH Dortmund
 Major: Masters in Digital Transformation
 Course: Compact Course on Programming with Python
+Project Github link: https://github.com/mbjallow6/ccp-hw06
 About the Site
 The Experiment Hub is a Django-based web application that offers a glimpse into the world of scientific exploration. You can find a collection of experiments, each with its details and status. It's a space where learning meets functionality, and data meets design.
 
