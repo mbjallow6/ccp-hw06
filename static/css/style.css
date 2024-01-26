@@ -190,11 +190,15 @@ button[type="submit"]:hover {
 
 main {
     padding-bottom: 80px; 
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main-content {
     min-height: calc(100vh - 140px); 
     padding-bottom: 80px; 
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 

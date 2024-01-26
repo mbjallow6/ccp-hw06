@@ -1,0 +1,36 @@
+<!-- search and filter form -->
+{% extends 'base_generic.html' %}
+{% block content %}
+    <h2>Search and Filter Experiments</h2>
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit" class="btn-primary">Search</button>
+    </form>
+
+
+    {% if experiments %}
+        <table>
+            <!-- Table headers -->
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Short Description</th>
+                <th>Owner Name</th>
+                <th>Details</th>
+            </tr>
+            <!-- Table rows -->
+            {% for experiment in experiments %}
+            <tr>
+                <td>{{ experiment.date }}</td>
+                <td>{{ experiment.title }}</td>
+                <td>{{ experiment.short_description }}</td>
+                <td>{{ experiment.owner_name }}</td>
+                <td><a href="{% url 'experiments:detail' experiment.str_id %}">View</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No experiments found.</p>
+    {% endif %}
+
+{% endblock %}
