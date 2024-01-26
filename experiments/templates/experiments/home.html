@@ -12,14 +12,24 @@
         <th>Details</th>
     </tr>
     {% for experiment in experiments %}
+
     <tr>
         <td>{{ experiment.date }}</td>
         <td>{{ experiment.title }}</td>
         <td>{{ experiment.short_description }}</td>
         <td>{{ experiment.owner_name }}</td>
-        <td><a href="{% url 'experiments:detail' experiment.id %}">View</a></td>
-        
+        <td><a href="{% url 'experiments:detail' experiment.str_id %}">View</a></td>
     </tr>
+
+    <!-- this was used with homework 6 -->
+    <!-- <tr>
+        <td>{{ experiment.date }}</td>
+        <td>{{ experiment.title }}</td>
+        <td>{{ experiment.short_description }}</td>
+        <td>{{ experiment.owner_name }}</td>
+        <td><a href="{% url 'experiments:detail' experiment.str_id %}">View</a></td>
+        
+    </tr> -->
     {% empty %}
     <tr>
         <td colspan="5">No experiments available.</td>
@@ -27,3 +37,19 @@
     {% endfor %}
 </table>
 {% endblock %}
+
+
+
+{% for experiment in experiments %}
+<tr>
+    <td>{{ experiment.fields.date }}</td>
+    <td>{{ experiment.fields.title }}</td>
+    <td>{{ experiment.fields.short_description }}</td>
+    <td>{{ experiment.fields.owner_name }}</td>
+    <td><a href="{% url 'experiments:detail' experiment.str_id %}">View</a></td>
+</tr>
+{% empty %}
+<tr>
+    <td colspan="5">No experiments available.</td>
+</tr>
+{% endfor %}

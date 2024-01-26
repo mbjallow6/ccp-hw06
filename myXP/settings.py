@@ -78,12 +78,29 @@ WSGI_APPLICATION = 'myXP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'experiments_db',
+#         'EnforceSchema': False,
+
+#         'CLIENT': {
+#             'host': 'mongodb+srv://mbjallow:9959923Mbj@cluster0.bgfn3ht.mongodb.net/?retryWrites=true&w=majority', # Replace with your MongoDB server address
+#             'port': 27017,               # Replace with your MongoDB port if different
+#             'username': 'mbjallow', # Replace with your MongoDB username (optional)
+#             'password': '9959923Mbj', # Replace with your MongoDB password (optional)
+#             'authSource': 'SCRAM-SHA-1', # Replace with your MongoDB authentication database (optional)
+#         }
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

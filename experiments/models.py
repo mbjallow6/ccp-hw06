@@ -1,4 +1,5 @@
 from django.db import models
+# from mongo_db_connection import db
 import datetime
 
 class Experiment(models.Model):
