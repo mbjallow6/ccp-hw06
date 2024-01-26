@@ -29,3 +29,8 @@ As an admin, you have the power to add, modify, and manage users and entries, ke
 - For details on setting up the project and the list of requirements, refer to the requirements.txt file which outlines all necessary dependencies.
 
 
+## New updates for homework 07
+- We created a new file `mongo_db_connection` to handle the connection to our mongo db database
+- We added a new view in the `experiments/views.py` to handle the search and filter view.
+- Now we are no longer using the Django models so we interface direct with MongoBD 
+
