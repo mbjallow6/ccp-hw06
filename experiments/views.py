@@ -64,6 +64,9 @@ def search(request):
     return render(request, 'experiments/search.html', {'form': form, 'experiments': experiments})
 
 
+
+# the code below was used for homework 6
+
 # from .models import Experiment
 
 # the code belw was used for homework 6 

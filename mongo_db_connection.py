@@ -18,7 +18,8 @@ def get_collection():
     db = get_database()
     return db['experiments_collections']
 
-
+def close_connection():
+    client.close()
 
 # db = client['experiments_db']
 # Send a ping to confirm a successful connection

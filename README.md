@@ -29,8 +29,16 @@ As an admin, you have the power to add, modify, and manage users and entries, ke
 - For details on setting up the project and the list of requirements, refer to the requirements.txt file which outlines all necessary dependencies.
 
 
-## New updates for homework 07
+## New updates for Homework 07: MongoDB 
 - We created a new file `mongo_db_connection` to handle the connection to our mongo db database
 - We added a new view in the `experiments/views.py` to handle the search and filter view.
 - Now we are no longer using the Django models so we interface direct with MongoBD 
+
+
+## New updates for Homework 08: Testing
+- In Homework 08, we focused on implementing automated tests. 
+- We have added 15 different tests in the experiments/tests.py file.
+- Tests cover a wide range of functionalities, including view responses, template usage, form submissions, and data integrity checks.
+- We used Django's built-in TestCase class and the unittest.mock library for mocking database interactions.
+- To run the tests, navigate to the project root directory and execute the following command: `python manage.py test experiments` 
 
